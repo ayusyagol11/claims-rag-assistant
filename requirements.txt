@@ -1,0 +1,24 @@
+# Core RAG framework
+llama-index==0.11.0
+llama-index-embeddings-huggingface==0.3.1
+llama-index-vector-stores-chroma==0.2.0
+llama-index-llms-anthropic==0.3.1
+
+# Vector DB
+chromadb==0.5.5
+
+# LLM
+# anthropic==0.34.0
+
+# PDF parsing
+pypdf==4.3.1
+
+# UI
+streamlit==1.38.0
+
+# Environment management
+python-dotenv==1.0.1
+
+# Evaluation
+pandas==2.2.2
+matplotlib==3.9.2
