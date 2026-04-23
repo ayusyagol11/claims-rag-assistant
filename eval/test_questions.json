@@ -1,0 +1,14 @@
+[
+  {
+    "id": "q01",
+    "question": "What is the time limit for lodging a workers compensation claim in the ACT?",
+    "expected_answer_contains": ["notice", "as soon as practicable"],
+    "expected_source_hint": "act_workers_comp_1951"
+  },
+  {
+    "id": "q02",
+    "question": "What is a biopsychosocial approach to rehabilitation?",
+    "expected_answer_contains": ["biological", "psychological", "social"],
+    "expected_source_hint": "return_to_work"
+  }
+]

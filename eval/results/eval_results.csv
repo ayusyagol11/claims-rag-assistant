@@ -1,0 +1,30 @@
+id,question,term_coverage,source_match,answer,top_source
+q01,What is the time limit for lodging a workers compensation claim in the ACT?,1.0,False,"Based on the provided sources, the time limit for lodging a workers compensation claim in the ACT is:
+
+**Generally: Within 3 years** after specific trigger events [Source 2]
+
+Specifically, a claim for compensation must be made:
+- Within 3 years after the injury happened; or
+- If the worker was not aware of the injury when it happened—within 3 years after the worker became aware of the injury; or
+- If the worker dies—within 3 years after the claimant became aware of the death [Source 2, Section 120(1)(b)]
+
+**Additional requirement:** Notice of the injury must be given ""as soon as practicable after the injury happened, and before the worker voluntarily left the employment in which the worker was injured"" [Source 2, Section 120(1)(a)]
+
+**Special rule for permanent injury claims:** Claims for compensation under part 4.4 (Compensation for permanent injuries) generally may not be made earlier than 2 years after the injury, though exceptions exist for imminently fatal asbestos-related diseases, stabilised injuries, or with Magistrates Court approval [Source 3, Section 121]
+
+**Late claims:** Even if these time limits are exceeded, a proceeding may still continue if the Magistrates Court allows it to be maintained under section 120A [Source 2, Section 120(2)(a)]",Workers Compensation Act 1951.pdf
+q02,What is a biopsychosocial approach to rehabilitation?,1.0,False,"Based on the provided sources, a biopsychosocial approach to rehabilitation is defined as follows:
+
+The biopsychosocial approach ""takes a holistic view of disability, understanding that social and environmental factors influence recovery alongside biological factors"" [Source 2]. 
+
+In the context of workers compensation rehabilitation, this approach is used to:
+
+1. **Understand workers' circumstances comprehensively** - It considers biological, psychological, and social factors that may influence a worker's recovery and return to work [Source 1, Source 2]
+
+2. **Identify barriers to desired outcomes** - The approach helps identify risk factors and obstacles that may impede recovery [Source 2]
+
+3. **Provide appropriate, tailored support** - Rather than focusing solely on the physical injury, it enables support that addresses the worker's individual circumstances across multiple dimensions [Source 1, Source 2]
+
+The approach is recommended in best practice frameworks for managing psychological claims and requires claims managers to have knowledge of how to apply it in practice [Source 2]. Rehabilitation providers are expected to be proficient in applying this approach, tailoring support with consideration to the biological, psychological and social factors that may influence each worker's recovery [Source 1].
+
+In essence, the biopsychosocial approach recognizes that recovery and return to work are influenced by more than just the physical injury—they are also affected by psychological factors (such as mental health, stress) and social factors (such as workplace relationships, family circumstances, and environmental conditions).",National Return to Work Strategy 2020-2030.pdf
