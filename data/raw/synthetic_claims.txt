@@ -1,0 +1,282 @@
+SYNTHETIC DE-IDENTIFIED WORKERS COMPENSATION CLAIM NARRATIVES
+ACT Workers Compensation — Portfolio Project Dataset
+================================================================
+
+IMPORTANT: These are entirely fictional, synthetic records created for a data science
+portfolio project. They do not represent real claimants, real employers, real medical
+professionals, or real claim decisions. Any resemblance to actual persons or events is
+coincidental. No real claimant data was used in the creation of these narratives.
+
+All dollar figures, timelines, and clinical details are illustrative only and should not
+be interpreted as legal, medical, or actuarial advice.
+
+================================================================
+
+CLAIM #A2024-0112
+-----------------
+Worker: Female, 34, administrative officer, ACT government agency.
+Incident: Repetitive strain injury to right wrist and forearm, diagnosed as de Quervain's
+tenosynovitis. Onset gradual over 6 weeks of intensive keyboard and mouse use following
+a team restructure that doubled her document processing workload. Formal injury reported
+to supervisor on 14 March 2024, claim lodged 3 days post-reporting.
+Medical: Initial GP assessment confirmed tendinopathy. Referred to hand physiotherapist
+for 8 sessions. Anti-inflammatory medication prescribed. Ergonomic workstation assessment
+conducted by Comcare-accredited OT in week 2 — adjustable keyboard tray and ergonomic
+mouse recommended and installed by employer.
+Return to Work: Modified duties commenced week 3 — verbal-only tasks, telephone liaison,
+meeting facilitation. Graduated return to full keyboard duties over 6 weeks with 2-hourly
+micro-break protocol. Worker returned to full pre-injury duties by week 10. No ongoing
+restrictions at closure.
+Liability and Reserve: Liability accepted under the Workers Compensation Act 1951 (ACT),
+Section 30 (disease injuries). Mechanism consistent with employment conditions. Reserve
+set at $9,200 covering physiotherapy, OT assessment, ergonomic equipment, and 3 weeks
+of partial incapacity payments. Final payout $8,750. Claim closed at week 14.
+Complexity flags: Nil. Employer cooperative, workplace modification straightforward.
+
+================================================================
+
+CLAIM #A2024-0289
+-----------------
+Worker: Male, 52, construction labourer, private building contractor, Canberra suburb.
+Incident: Acute lower back injury sustained while manually lifting a 35kg concrete block
+without mechanical assistance. Heard audible pop at time of lift. Attended emergency
+department same evening. MRI confirmed L4-L5 disc bulge with mild nerve root impingement.
+Claim lodged 5 days post-incident.
+Medical: Emergency department, GP follow-up, referred to spinal physiotherapist (12
+sessions approved) and pain management specialist. Temporary prescription of muscle
+relaxants and NSAIDs. Neurological symptoms (left leg tingling) resolved by week 6.
+Return to Work: Initial period of total incapacity — 8 weeks. Graduated return to
+modified duties week 9 (supervisory and site safety observer role, no manual handling).
+Full manual handling duties cleared by treating GP at week 18 with a 20kg lifting
+restriction remaining. Worker and employer agreed to permanent reassignment to leading
+hand supervisory role. No further manual handling above 20kg post-closure.
+Liability and Reserve: Liability accepted. Mechanism clearly consistent with employment.
+Reserve set at $41,500 covering 8 weeks total incapacity payments (at applicable
+weekly rate), 12 physiotherapy sessions, pain management consultation, specialist MRI,
+and 10 weeks partial incapacity differential payments. Final payout $38,200.
+Complexity flags: Employer initially disputed supervisory role classification and wage
+differential. Resolved via conciliation at week 12. No solicitor involvement.
+
+================================================================
+
+CLAIM #A2024-0334
+-----------------
+Worker: Female, 28, registered nurse, ACT private hospital.
+Incident: Needle-stick injury sustained during IV cannulation procedure on a patient
+with a complex blood-borne infection history. Injury occurred despite PPE use due to
+unexpected patient movement. Incident reported immediately per hospital protocol.
+Claim lodged same day.
+Medical: Immediate post-exposure protocol initiated — wound management, baseline blood
+tests, prophylactic antiretroviral medication commenced within 2 hours. Serial blood
+tests at 6 weeks, 3 months, and 6 months. All results returned negative. Worker
+experienced significant anxiety and insomnia during monitoring period — referred to
+EAP psychologist (6 sessions).
+Return to Work: No physical capacity restrictions — worker remained on full duties
+throughout with psychological support. Modified roster to reduce high-acuity patient
+contact during acute anxiety phase (weeks 2–5) at worker's request and treating
+psychologist recommendation.
+Liability and Reserve: Liability accepted as workplace injury. Reserve set at $7,800
+covering post-exposure prophylaxis medication, serial blood tests, 6 psychology sessions,
+and EAP coordination. Final payout $7,400. Claim closed at 6-month blood test mark
+following confirmed negative result.
+Complexity flags: Worker initially reluctant to engage EAP — 2 weeks of case manager
+outreach required before referral accepted. Psychological support was critical to
+maintaining workplace engagement throughout monitoring period.
+
+================================================================
+
+CLAIM #A2024-0447
+-----------------
+Worker: Male, 61, school maintenance officer, ACT public school.
+Incident: Fall from a 2.4-metre ladder while replacing a light fitting in a school
+gymnasium. Left foot slipped from rung — worker fell backwards and landed on left
+shoulder and elbow. Ambulance called. Hospital confirmed left proximal humerus fracture
+(3-part) and radial head fracture. Surgery performed within 48 hours — ORIF (open
+reduction internal fixation) of humerus. Claim lodged by employer on worker's behalf
+on day 2 of hospitalisation.
+Medical: 5-day hospital stay post-surgery. Discharge to home with sling immobilisation
+for 6 weeks. Intensive physiotherapy commenced week 7 — range of motion, strength
+rehabilitation over 22 sessions. Occupational therapy assessment at 3 months confirmed
+significant residual restriction in overhead reach and load-bearing above 5kg.
+Return to Work: Total incapacity for 14 weeks. Modified return — administrative and
+grounds-level maintenance tasks (no ladders, no overhead work) from week 15. Given
+worker's age and residual functional restriction, employer and case manager assessed
+that return to full pre-injury ladder-based duties was unlikely. Vocational assessment
+conducted at month 5 — identified modified maintenance role without height requirements
+as permanent placement. Worker accepted and remains employed in this capacity.
+Liability and Reserve: Liability accepted. Reserve set at $87,400 covering surgery and
+hospitalisation gap, 14 weeks total incapacity payments, 22 physiotherapy sessions, OT
+assessment, vocational assessment, and ongoing partial incapacity differential. Final
+payout ongoing at claim review — projected $81,000 to closure.
+Complexity flags: High complexity. Surgical case, significant residual impairment, age
+flag for recovery trajectory. Employer required significant support to identify suitable
+modified role. Claim remains open at 12-month mark for ongoing partial incapacity
+monitoring and potential impairment assessment referral.
+
+================================================================
+
+CLAIM #A2024-0521
+-----------------
+Worker: Female, 45, warehouse pick-and-pack operator, logistics company, ACT.
+Incident: Slip on wet floor in refrigerated storage area — wet floor sign had not been
+placed following a refrigeration unit leak. Worker fell forward, sustaining a left knee
+injury — patella contusion and anterior cruciate ligament (ACL) partial tear confirmed
+on MRI. Claim lodged 2 days post-incident.
+Medical: Immobilisation, GP referral, orthopaedic specialist review at week 2.
+Conservative management recommended over immediate surgery given partial tear grade.
+Physiotherapy — 16 sessions over 12 weeks. Hydrotherapy added at week 8. Specialist
+review at 3 months confirmed satisfactory healing without surgical intervention required.
+Return to Work: Total incapacity 6 weeks. Modified duties from week 7 — seated quality
+control and packaging inspection role (no walking on uneven surfaces, no kneeling,
+no load-bearing above 10kg). Graduated return to full warehouse duties by week 20 with
+permanent restriction of working in refrigerated areas (employer complied — warm
+warehouse zone reassignment).
+Liability and Reserve: Liability accepted with note of employer contributory negligence
+(wet floor sign not deployed — WorkSafe ACT notified separately). Reserve set at
+$28,500 covering 6 weeks total incapacity, 16 physio sessions, hydrotherapy, specialist
+consultations, and 14 weeks partial incapacity differential. Final payout $26,100.
+Complexity flags: WorkSafe ACT investigation conducted concurrently — employer issued
+improvement notice. No impact on claim liability or payments.
+
+================================================================
+
+CLAIM #A2024-0603
+-----------------
+Worker: Male, 39, IT systems technician, federal government agency, Canberra CBD.
+Incident: Psychological injury — diagnosed adjustment disorder with anxiety, attributed
+to a sustained period of workplace bullying by a direct line manager over 8 months.
+Worker documented 14 specific incidents including public humiliation, exclusion from
+meetings, and removal of project responsibilities without explanation. Formal complaint
+lodged with HR prior to claim — HR investigation found substantiated bullying in 3 of
+14 incidents. Claim lodged following treating psychiatrist diagnosis.
+Medical: GP referral to psychiatrist — diagnosis confirmed at week 2. Commenced
+weekly psychology sessions (CBT-based). Short-term SSRI medication prescribed.
+Capacity assessment: unfit for work in current role and workplace for 12 weeks.
+Return to Work: Worker unable to return to original team — employer arranged temporary
+placement in separate directorate under a different reporting line for weeks 13–20.
+Graduated psychological capacity improvement documented by treating psychologist.
+Worker accepted voluntary internal transfer at month 6 to different branch — no
+ongoing psychological incapacity at transfer date.
+Liability and Reserve: Liability accepted for substantiated component of claim. Reserve
+set at $34,200 covering 12 weeks total incapacity, psychiatrist and psychologist
+sessions (36 total approved), medication, and workplace rehabilitation coordination.
+Final payout $31,800. Claim closed at month 9.
+Complexity flags: Very high complexity. Manager placed on administrative review during
+claim. Employer relations strained — required significant case manager mediation.
+Legal representation by worker from week 4 — all communications via solicitor.
+Claim required senior case manager oversight from week 6 onward.
+
+================================================================
+
+CLAIM #A2024-0718
+-----------------
+Worker: Female, 23, hospitality worker (barista), Canberra inner-north cafe.
+Incident: Burn injury to right forearm and hand — steam wand from commercial espresso
+machine contacted skin during a busy morning service period. Equipment had a known
+defective steam valve that had been flagged to management 3 weeks prior without action.
+Burn classified as partial-thickness (second degree) across 4% body surface area.
+Claim lodged same day.
+Medical: Hospital emergency — wound cleaned, non-adherent dressings applied. Referred
+to specialist burns clinic for 6 follow-up appointments. Wound healing confirmed at
+week 8 with minimal scarring. No skin grafting required. No occupational therapy needed.
+Return to Work: Total incapacity for 3 weeks (wound dressing management, pain, heat
+exposure risk). Modified return week 4 — front-of-house, no equipment operation.
+Full return to barista duties week 8 following burns clinic discharge.
+Liability and Reserve: Liability accepted. Equipment defect documented — WorkSafe ACT
+notified of prior management awareness. Reserve set at $6,300 covering 3 weeks total
+incapacity, 6 burns clinic appointments, and dressing supplies. Final payout $5,900.
+Complexity flags: Employer issued prohibition notice by WorkSafe ACT for defective
+equipment — machine repaired prior to worker's return. Worker did not pursue common
+law claim despite solicitor approach at week 2.
+
+================================================================
+
+CLAIM #A2024-0834
+-----------------
+Worker: Male, 57, bus driver, ACT public transport operator.
+Incident: Aggravation of pre-existing lumbar spondylosis attributed to prolonged
+vibration exposure over 18 years of bus driving. Worker reported worsening lower back
+pain over 3-month period — treating GP noted significant deterioration compared to
+prior imaging from 2019. GP opinion that occupational vibration was a substantial
+contributing factor to acute-on-chronic exacerbation. Claim lodged under disease
+injury provisions.
+Medical: GP, physiotherapy (10 sessions), specialist spinal physician review. Spinal
+physician confirmed occupational vibration as contributing factor consistent with
+literature. CT scan showed progression of spondylosis beyond age-expected norms.
+Ongoing pain management regime established. Opioid medication avoided per specialist
+preference — TENS machine and heat therapy protocol.
+Return to Work: Worker certified unfit for bus driving duties for 8 weeks. Offered
+customer service and depot logistics role during recovery — worker accepted. Cleared
+for gradual return to driving duties at week 9 with a maximum 4-hour driving shift
+limit (employer approved through rostering adjustment). Permanent 4-hour driving
+limit remains at claim closure.
+Liability and Reserve: Liability accepted under Section 30 (disease injury — employment
+a significant contributing factor). Pre-existing condition contribution noted in file
+but did not reduce liability. Reserve set at $19,800 covering 8 weeks total incapacity,
+physiotherapy, specialist consultation, CT imaging, and 10 weeks partial incapacity
+differential. Final payout $18,400.
+Complexity flags: Apportionment discussion between insurer and employer regarding
+pre-existing condition contribution — resolved in favour of full acceptance per ACT
+Act provisions. Worker's union involved from week 1 — cooperative engagement overall.
+
+================================================================
+
+CLAIM #A2024-0912
+-----------------
+Worker: Female, 31, early childhood educator, private childcare centre, Canberra south.
+Incident: Hearing damage — noise-induced hearing loss identified during routine
+audiometric testing. Worker reported progressive difficulty hearing high-frequency
+sounds over 12 months. Audiologist confirmed bilateral high-frequency sensorineural
+hearing loss pattern consistent with chronic noise exposure. Childcare environment
+noise levels measured at 82–88 dB during peak periods — above recommended 8-hour
+exposure limit per Safe Work Australia guidelines. Claim lodged following audiologist
+report.
+Medical: Audiologist assessment confirmed occupational hearing loss. Referred to
+ENT specialist — cochlear damage confirmed as permanent. Hearing aids prescribed and
+fitted (bilateral, high-frequency amplification). No improvement expected with treatment
+— condition is permanent.
+Return to Work: No capacity restrictions — worker remained on full duties throughout.
+Employer required to implement noise management controls (acoustic ceiling panels,
+quiet room rotation policy, mandatory hearing protection during outdoor play).
+Liability and Reserve: Liability accepted under disease injury provisions. Reserve set
+at $14,100 covering audiologist assessment, ENT specialist, bilateral hearing aids
+(initial pair), and one scheduled replacement pair. Ongoing monitoring reserve for
+future audiometric reviews. Final payout $13,200.
+Complexity flags: Employer initially disputed noise levels — independent hygienist
+measurement engaged by insurer confirmed readings. Permanent impairment referral
+lodged — impairment assessment pending at claim review date.
+
+================================================================
+
+CLAIM #A2024-1047
+-----------------
+Worker: Male, 42, warehouse operator, logistics company, Canberra airport precinct.
+Incident: Slip on wet floor in loading bay area — floor wet following roof leak during
+heavy rainfall event. Wet floor warning sign was not placed. Worker fell and sustained
+lower back muscular strain and right wrist sprain (no fractures confirmed on X-ray).
+Attended GP same day. Claim lodged 3 days post-incident.
+Medical: GP assessment, X-ray (wrist and lumbar — no fractures), referred to
+physiotherapist. 8 physiotherapy sessions approved. Anti-inflammatory medication
+prescribed short-term. Wrist splint worn for 2 weeks. Lumbar strain resolved at
+week 5. Wrist assessed as fully functional at week 6.
+Return to Work: Modified duties commenced week 2 — light picking duties, no repetitive
+wrist flexion, no lifting above 5kg. Full duties cleared by treating GP at week 6.
+Worker returned to full pre-injury role with no restrictions.
+Liability and Reserve: Liability accepted. Reserve set at $18,500 covering 1 week
+total incapacity, 5 weeks partial incapacity differential payments, 8 physiotherapy
+sessions, GP consultations, and imaging. Final payout $17,200. Claim closed at week 8.
+Complexity flags: Nil. Straightforward soft-tissue claim. Employer cooperative and
+workplace modification straightforward. Wet floor sign protocol reviewed by employer
+post-incident.
+
+================================================================
+
+END OF SYNTHETIC CLAIMS DATASET
+Total claims: 10
+Date range: 2024
+Jurisdiction: ACT (Australian Capital Territory)
+Purpose: RAG system evaluation corpus — portfolio project use only
+
+All names, identifying details, employer names, and specific incident details are
+entirely fictional. Created by Aayush Yagol for the Claims Document Intelligence
+portfolio project, April 2026.

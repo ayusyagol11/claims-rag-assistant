@@ -2,13 +2,121 @@
   {
     "id": "q01",
     "question": "What is the time limit for lodging a workers compensation claim in the ACT?",
-    "expected_answer_contains": ["notice", "as soon as practicable"],
-    "expected_source_hint": "act_workers_comp_1951"
+    "expected_answer_contains": ["notice", "practicable"],
+    "expected_source_hint": "Workers Compensation Act"
   },
   {
     "id": "q02",
+    "question": "What weekly compensation is a worker entitled to during total incapacity?",
+    "expected_answer_contains": ["weekly", "compensation", "incapacity"],
+    "expected_source_hint": "Workers Compensation Act"
+  },
+  {
+    "id": "q03",
+    "question": "What are an employer's obligations when a worker is injured at the workplace?",
+    "expected_answer_contains": ["employer", "notify", "injury"],
+    "expected_source_hint": ""
+  },
+  {
+    "id": "q04",
+    "question": "What medical expenses are covered under workers compensation in the ACT?",
+    "expected_answer_contains": ["medical", "treatment", "reasonable"],
+    "expected_source_hint": "Workers Compensation Act"
+  },
+  {
+    "id": "q05",
+    "question": "Under what circumstances can a workers compensation claim be disputed or rejected?",
+    "expected_answer_contains": ["dispute", "reject", "claim"],
+    "expected_source_hint": ""
+  },
+  {
+    "id": "q06",
+    "question": "What is a return-to-work plan and what should it include?",
+    "expected_answer_contains": ["return", "plan", "duties"],
+    "expected_source_hint": "National Return to Work"
+  },
+  {
+    "id": "q07",
+    "question": "What is the role of a rehabilitation provider in a workers compensation claim?",
+    "expected_answer_contains": ["rehabilitation", "provider", "recovery"],
+    "expected_source_hint": "National Return to Work"
+  },
+  {
+    "id": "q08",
+    "question": "What steps should a Claims Advisor take when a worker fails to engage with return-to-work activities?",
+    "expected_answer_contains": ["engage", "obligations", "steps"],
+    "expected_source_hint": ""
+  },
+  {
+    "id": "q09",
+    "question": "How should a case manager document a claim to meet APRA regulatory requirements?",
+    "expected_answer_contains": ["document", "record", "compliance"],
+    "expected_source_hint": ""
+  },
+  {
+    "id": "q10",
+    "question": "What happens to weekly payments if a worker returns to modified duties on reduced hours?",
+    "expected_answer_contains": ["modified", "reduced", "payment"],
+    "expected_source_hint": "Workers Compensation Act"
+  },
+  {
+    "id": "q11",
     "question": "What is a biopsychosocial approach to rehabilitation?",
     "expected_answer_contains": ["biological", "psychological", "social"],
-    "expected_source_hint": "return_to_work"
+    "expected_source_hint": "National Return to Work"
+  },
+  {
+    "id": "q12",
+    "question": "What does 'suitable employment' mean in the context of workers compensation?",
+    "expected_answer_contains": ["suitable", "employment", "capacity"],
+    "expected_source_hint": ""
+  },
+  {
+    "id": "q13",
+    "question": "What is the difference between total and partial incapacity for work?",
+    "expected_answer_contains": ["total", "partial", "incapacity"],
+    "expected_source_hint": "Workers Compensation Act"
+  },
+  {
+    "id": "q14",
+    "question": "What is a pure premium in insurance and how is it calculated?",
+    "expected_answer_contains": ["cannot", "sources do not", "not included"],
+    "expected_source_hint": ""
+  },
+  {
+    "id": "q15",
+    "question": "What is reserve setting and why does it matter in claims management?",
+    "expected_answer_contains": ["reserve", "liability", "estimate"],
+    "expected_source_hint": ""
+  },
+  {
+    "id": "q16",
+    "question": "Based on the synthetic claim A2024-1047, what return-to-work outcome was achieved?",
+    "expected_answer_contains": ["modified duties", "week 6"],
+    "expected_source_hint": "synthetic_claims"
+  },
+  {
+    "id": "q17",
+    "question": "For the synthetic claim involving a warehouse operator with a lower back injury, what was the reserve amount set?",
+    "expected_answer_contains": ["18,500", "reserve"],
+    "expected_source_hint": "synthetic_claims"
+  },
+  {
+    "id": "q18",
+    "question": "From the de-identified synthetic claim narratives in the dataset, what types of workplace injuries are described across the 10 claims?",
+    "expected_answer_contains": ["back", "injury", "claim"],
+    "expected_source_hint": "synthetic_claims"
+  },
+  {
+    "id": "q19",
+    "question": "What are the current interest rates set by the Reserve Bank of Australia?",
+    "expected_answer_contains": ["sources do not", "cannot", "not specified"],
+    "expected_source_hint": ""
+  },
+  {
+    "id": "q20",
+    "question": "Who won the 2024 Australian federal election?",
+    "expected_answer_contains": ["sources do not", "cannot", "not specified"],
+    "expected_source_hint": ""
   }
 ]

@@ -1,30 +1,335 @@
 id,question,term_coverage,source_match,answer,top_source
-q01,What is the time limit for lodging a workers compensation claim in the ACT?,1.0,False,"Based on the provided sources, the time limit for lodging a workers compensation claim in the ACT is:
+q01,What is the time limit for lodging a workers compensation claim in the ACT?,1.0,True,"Based on the provided sources, the time limit for lodging a workers compensation claim in the ACT is:
 
-**Generally: Within 3 years** after specific trigger events [Source 2]
+**Generally, a claim must be made within 3 years** after one of the following events [Source 2]:
 
-Specifically, a claim for compensation must be made:
-- Within 3 years after the injury happened; or
-- If the worker was not aware of the injury when it happened—within 3 years after the worker became aware of the injury; or
-- If the worker dies—within 3 years after the claimant became aware of the death [Source 2, Section 120(1)(b)]
+1. Within 3 years after the injury happened; or
+2. If the worker was not aware of the injury when it happened—within 3 years after the worker became aware of the injury; or
+3. If the worker dies—within 3 years after the claimant became aware of the death
 
-**Additional requirement:** Notice of the injury must be given ""as soon as practicable after the injury happened, and before the worker voluntarily left the employment in which the worker was injured"" [Source 2, Section 120(1)(a)]
+**Additional requirements:**
 
-**Special rule for permanent injury claims:** Claims for compensation under part 4.4 (Compensation for permanent injuries) generally may not be made earlier than 2 years after the injury, though exceptions exist for imminently fatal asbestos-related diseases, stabilised injuries, or with Magistrates Court approval [Source 3, Section 121]
+- Notice of the injury must be given ""as soon as practicable after the injury happened, and before the worker voluntarily left the employment in which the worker was injured"" [Source 2]
 
-**Late claims:** Even if these time limits are exceeded, a proceeding may still continue if the Magistrates Court allows it to be maintained under section 120A [Source 2, Section 120(2)(a)]",Workers Compensation Act 1951.pdf
-q02,What is a biopsychosocial approach to rehabilitation?,1.0,False,"Based on the provided sources, a biopsychosocial approach to rehabilitation is defined as follows:
+**Special rule for permanent injury claims:**
 
-The biopsychosocial approach ""takes a holistic view of disability, understanding that social and environmental factors influence recovery alongside biological factors"" [Source 2]. 
+For claims under Part 4.4 (Compensation for permanent injuries), the claim may not be made earlier than 2 years after the injury, unless specific exceptions apply (such as imminently fatal asbestos-related disease, the injury has stabilised, or the Magistrates Court allows an early claim) [Source 3]
 
-In the context of workers compensation rehabilitation, this approach is used to:
+**Late claims:**
 
-1. **Understand workers' circumstances comprehensively** - It considers biological, psychological, and social factors that may influence a worker's recovery and return to work [Source 1, Source 2]
+Even if a claim is made outside these time periods, a proceeding may still continue if the Magistrates Court allows it to be maintained under section 120A [Source 2]
 
-2. **Identify barriers to desired outcomes** - The approach helps identify risk factors and obstacles that may impede recovery [Source 2]
+A claim is considered made on the day it is given to the employer or the insurer [Source 3].",Workers Compensation Act 1951.pdf
+q02,What weekly compensation is a worker entitled to during total incapacity?,1.0,True,"Based on the provided sources, a worker's entitlement to weekly compensation during total incapacity depends on the duration of incapacity:
 
-3. **Provide appropriate, tailored support** - Rather than focusing solely on the physical injury, it enables support that addresses the worker's individual circumstances across multiple dimensions [Source 1, Source 2]
+## First 26 Weeks of Total Incapacity
 
-The approach is recommended in best practice frameworks for managing psychological claims and requires claims managers to have knowledge of how to apply it in practice [Source 2]. Rehabilitation providers are expected to be proficient in applying this approach, tailoring support with consideration to the biological, psychological and social factors that may influence each worker's recovery [Source 1].
+During the first 26 weeks, a worker is entitled to compensation **equal to their average pre-incapacity weekly earnings** [Source 2]. This is established under section 39 of the Act.
 
-In essence, the biopsychosocial approach recognizes that recovery and return to work are influenced by more than just the physical injury—they are also affected by psychological factors (such as mental health, stress) and social factors (such as workplace relationships, family circumstances, and environmental conditions).",National Return to Work Strategy 2020-2030.pdf
+## After 26 Weeks of Total Incapacity
+
+After the first 26 weeks of total incapacity, the worker is entitled to **65% of their average pre-incapacity weekly earnings, or the statutory floor (whichever is more at the time of payment)**, provided that 65% of their average pre-incapacity weekly earnings is more than the pre-incapacity floor [Source 2].
+
+The sources provide an example: ""Jim is entitled under section 39 to compensation equal to his average pre-incapacity weekly earnings for the 14 weeks and the next 12 weeks of his total incapacity (making a total of 26 weeks not including the 3 days return to work). He is then entitled to be paid 65% of his pre-incapacity weekly earnings (or the statutory floor, if more at the time of payment) for the remaining period (6 weeks) he is totally incapacitated"" [Source 2].
+
+## When Payments Stop
+
+Weekly compensation for total incapacity stops at the earliest of: (a) when the worker stops being totally incapacitated, (b) when the worker returns to work, or (c) when the worker dies [Source 3]. However, if payments stop due to recovery or return to work, the worker may again become entitled if they become totally or partially incapacitated again [Source 3].",Workers Compensation Act 1951.pdf
+q03,What are an employer's obligations when a worker is injured at the workplace?,0.6666666666666666,True,"Based on the provided sources, an employer has the following obligations when a worker is injured at the workplace:
+
+## Notification Obligations
+
+**For Uninsured Employers:** If an employer does not have a compulsory insurance policy covering the injured worker, the employer must, within 48 hours of receiving an injury notice:
+- Give the DI fund manager a copy of the injury notice
+- Tell the manager in writing that they do not have a compulsory insurance policy that applies to the worker in relation to the injury
+
+Maximum penalty: 50 penalty units [Source 2]
+
+## Return to Work Obligations
+
+**For Full-time, Part-time and Casual Workers:** When a worker has been totally or partially incapacitated and can return to work, and the worker requests employment within 6 months after becoming entitled to weekly compensation, the employer must provide employment that is:
+- So far as reasonably practical, the same as or equivalent to the employment at the time of injury
+- Otherwise suitable employment for the worker
+
+Maximum penalty: 10 penalty units [Source 1]
+
+**For Contract Workers:** Similar obligations apply, with the worker needing to request employment within ""the defined period"" [Source 3]
+
+**Exceptions:** These return-to-work obligations do not apply if:
+- The worker voluntarily left employment after the injury
+- The employer ended the worker's employment for reasons other than the injury
+- The employer is a non-business employer
+- The employer cannot provide suitable employment [Source 3]
+
+**Note:** The sources provided do not contain information about initial injury reporting requirements or other immediate workplace injury obligations.",Workers Compensation Act 1951.pdf
+q04,What medical expenses are covered under workers compensation in the ACT?,0.6666666666666666,True,"# Medical Expenses Covered Under Workers Compensation in the ACT
+
+Under the ACT Workers Compensation Act 1951, employers are liable to pay for the following medical expenses:
+
+## Core Medical Coverage
+
+**1. Medical Treatment Costs**
+The employer must pay ""an amount of compensation appropriate for the provision of the medical treatment, having regard to the charges customarily made for similar medical treatment where the treatment is received"" for medical treatment reasonably received in relation to the injury [Source 3].
+
+**2. Rehabilitation Services**
+The employer is liable for ""the cost of rehabilitation services received by the worker in relation to the injury under the worker's personal injury plan"" in accordance with that plan [Source 3]. This includes training and retraining services [Source 3].
+
+**3. Home Alterations**
+The employer must pay for alterations to the worker's place of residence if:
+- The worker has an impairment as a result of the injury
+- The worker has received or is receiving medical treatment for the injury
+- The alteration is reasonably required in relation to the worker's impairment [Source 3]
+
+**4. Repair/Replacement of Medical Aids**
+Coverage includes ""the cost of medical treatment consisting of the repair or replacement of a worker's contact lenses, crutches, prosthesis, spectacles or other artificial aid,"" subject to a maximum amount [Source 1].
+
+## Associated Costs
+
+The cost of medical treatment or rehabilitation services also includes:
+
+- **Lost wages** due to attending appointments [Source 2]
+- **Transport costs** to and from the treatment location [Source 2]
+- **Accommodation and meal costs** required because of attendance at the treatment location [Source 2]
+
+## Maximum Amounts
+
+For repair/replacement of medical aids, the maximum payable is either an amount agreed between worker and employer, or ""$500 cpi indexed"" if no agreement exists [Source 2].
+
+## Important Limitations
+
+Employers are **not liable** for treatment costs if the worker is a participant in the LTCS (Lifetime Care and Support) scheme for treatment relating to that injury while participating in the scheme, or after receiving a lump sum agreement [Source 1].",Workers Compensation Act 1951.pdf
+q05,Under what circumstances can a workers compensation claim be disputed or rejected?,1.0,True,"Based on the provided source documents, there is **limited information** about the specific circumstances under which a workers compensation claim can be disputed or rejected. However, the sources do reveal the following:
+
+## Deficient Claims Due to Missing Medical Certificates
+
+A claim can be considered **not properly made** if it lacks a compliant medical certificate [Source 2]. Specifically:
+
+- A claim for weekly compensation must be accompanied by a medical certificate from a doctor (or a prescribed doctor for imminently fatal asbestos-related disease claims) [Source 1, Section 116(2)].
+
+- The medical certificate must comply with regulatory requirements for medical assessments and include ""a statement of the doctor's assessment of whether the worker's condition is consistent with the worker's employment being a substantial contributing factor to the injury"" [Source 2, Section 118(2)].
+
+- If the insurer notifies the worker in writing about the deficiency within 72 hours of receiving the claim, ""the claim is not considered to have been made until section 118(2) is complied with"" [Source 2, Section 119(2)].
+
+- However, if the insurer fails to notify the worker about the deficiency within 72 hours, the claim is taken to comply with the certificate requirements [Source 2, Section 119(3)].
+
+## What the Sources Do NOT Cover
+
+The provided documents **do not contain information** about other grounds for disputing or rejecting claims, such as:
+- Whether the injury is work-related
+- Eligibility criteria for compensation
+- Time limits for making claims
+- Fraud or misrepresentation
+- Medical causation disputes beyond the certificate requirement
+
+To fully answer this question, additional source documents covering claim assessment, liability determination, and dispute resolution would be needed.",Workers Compensation Act 1951.pdf
+q06,What is a return-to-work plan and what should it include?,0.6666666666666666,True,"# Return-to-Work Plan
+
+Based on the provided sources, a return-to-work plan is a formal document required by legislation as part of the workers' compensation and rehabilitation process, though the sources note that ""despite legislative requirements to have a plan in place, only two thirds (65.3 per cent) of workers surveyed reported having a return to work plan"" [Source 1].
+
+## Key Characteristics
+
+**Collaborative Development**: Workers have ""particular rights and responsibilities in the return to work process,"" including ""participating in the design and implementation of their rehabilitation and return to work plan"" [Source 3]. The worker works closely with their employer (often through a nominated return to work coordinator), treating health practitioners, claims manager, and sometimes an external workplace rehabilitation provider [Source 3].
+
+**Part of Broader Process**: The return-to-work plan is one component of a typical return-to-work path that may include ""a rehabilitation assessment and a return to work program"" [Source 2]. However, ""everyone's return to work journey is different"" and may not include all these steps [Source 2].
+
+## What Should Be Included
+
+The sources do not provide specific details about what elements must be included in a return-to-work plan. However, they indicate that:
+
+- Plans should be ""regularly reviewed and continual improvement informed by learnings from experiences and outcomes in the workplace"" [Source 1]
+- The process should support workers to ""engage in rehabilitation activities"" [Source 2]
+
+**Note**: For specific requirements about plan contents, you would need to consult the relevant jurisdictional legislation and guidelines, which are not included in these source documents.",National Return to Work Strategy 2020-2030.pdf
+q07,What is the role of a rehabilitation provider in a workers compensation claim?,1.0,True,"Based on the provided sources, the role of a rehabilitation provider in a workers compensation claim includes:
+
+## Core Functions
+
+**Assessment and Program Development:**
+- Assess the needs of the injured worker [Source 2]
+- Conduct rehabilitation assessments to determine what duties the worker can safely perform [Source 3]
+- Develop personalised return to work programs tailored to individual circumstances [Source 3]
+
+**Service Provision:**
+Rehabilitation providers deliver ""appropriate, adequate and timely services for the worker aimed at maintaining the worker in suitable employment or returning the worker to suitable employment"" [Source 2]. These services must be in accordance with relevant protocols [Source 2].
+
+## Professional Requirements
+
+Rehabilitation providers must be:
+- Qualified and competent health professionals [Source 1]
+- Approved by the Minister to provide vocational rehabilitation (in the ACT jurisdiction) [Source 2]
+
+## Approach to Support
+
+When facilitating a worker's return to work, rehabilitation providers are expected to:
+- Tailor support with consideration to ""biological, psychological and social factors that may influence their recovery and return to work"" [Source 1]
+- Be proficient in applying principles of good work to each individual case [Source 1]
+- Take a collaborative approach with a range of stakeholders [Source 1]
+
+## Collaborative Process
+
+Rehabilitation providers work alongside case managers, doctors, and employers to create individualised programs and ensure all parties understand the program's goals, expectations and responsibilities [Source 3].",National Return to Work Strategy 2020-2030.pdf
+q08,What steps should a Claims Advisor take when a worker fails to engage with return-to-work activities?,0.6666666666666666,True,"Based on the provided sources, there is **no specific guidance on the steps a Claims Advisor should take when a worker fails to engage with return-to-work activities**.
+
+The sources describe the general return to work process and the worker's role, but do not provide procedural steps for Claims Advisors to follow in cases of non-engagement.
+
+What the sources do indicate:
+
+**Worker responsibilities:** Workers have ""responsibilities in the return to work process"" including ""participating in the design and implementation of their rehabilitation and return to work plan, and making reasonable efforts to return to work where they have capacity to do so"" [Source 3].
+
+**Potential barriers to engagement:** The sources identify psychological factors that may affect a worker's return to work outcome, including:
+- Pain catastrophising/fear avoidance
+- Concern about making a claim
+- Lower recovery expectations
+- Lower self-efficacy
+- Perceived reduced work ability [Source 3]
+
+**Support mechanisms:** Workers may need ""access to help from those who can advocate on their behalf"" including ""formal advocates such as representative unions, lawyers and community organisations"" or ""informal advocates such as family, friends and peers"" [Source 3].
+
+**To answer your question properly, you would need access to claims management procedures, policy documents, or legislative requirements that specifically address non-engagement protocols.** The provided sources focus on the general return to work framework rather than specific claims management procedures.",Comcare - Return to work - An overview for employees.pdf
+q09,How should a case manager document a claim to meet APRA regulatory requirements?,0.3333333333333333,True,"Based on the provided sources, I cannot answer this question about how a case manager should document a claim to meet APRA regulatory requirements.
+
+The sources provided [Sources 1-3] relate to APRA's Prudential Standard GPS 320 concerning actuarial and related matters for insurers. These documents focus on:
+
+- Requirements for Appointed Actuaries to prepare Financial Condition Reports (FCRs) [Source 1]
+- Special purpose reviews and non-routine reporting by Appointed Actuaries [Source 2]
+- Reviewing Actuary assessments and APRA's discretionary powers [Source 3]
+
+**The sources do not contain information about:**
+- Case manager responsibilities
+- Claim documentation requirements
+- Claims management procedures
+- Operational requirements for handling individual workers compensation claims
+
+These sources address prudential regulation of insurance entities at an institutional level (actuarial reporting, financial condition assessments), not operational claims management practices.
+
+To answer your question properly, I would need access to different source documents that specifically address claims management procedures, documentation standards, or operational guidelines for case managers in the workers compensation context.",GPS-320-Actuarial-and-Related-Matters-January-2013.pdf
+q10,What happens to weekly payments if a worker returns to modified duties on reduced hours?,1.0,True,"When a worker returns to modified duties on reduced hours, they continue to receive weekly compensation for the difference between what they earn in their reduced capacity and their pre-incapacity earnings.
+
+## How Weekly Payments Work on Reduced Hours
+
+According to the examples provided in the legislation:
+
+**During Partial Incapacity:**
+When a worker is partially incapacitated and working reduced hours, they receive:
+- Their actual wages from the employer for the hours worked, PLUS
+- Weekly compensation equal to ""the difference between the average weekly amount that [the worker] is paid for working and his pre-incapacity earnings"" [Source 3]
+
+**Practical Example:**
+The legislation provides a detailed example with Nicholas, who works reduced hours during partial incapacity. For the weeks when Nicholas works 20% of his pre-incapacity hours, he receives:
+- 20% of his normal pre-incapacity earnings as wages from his employer
+- Weekly compensation for ""the difference between the average weekly amount that Nicholas is paid for working and his pre-incapacity earnings"" [Source 3]
+
+Similarly, when Nicholas later works 60% of his pre-incapacity hours, he receives 60% of his normal earnings as wages, plus weekly compensation for the difference [Source 3].
+
+**Important Note:**
+There are statutory ceiling and floor limits that may apply depending on the worker's earnings level. For workers earning above certain thresholds, compensation may be capped at the difference between what they're paid and the statutory ceiling [Source 3].
+
+The key principle is that weekly compensation continues but is adjusted to top up the worker's reduced earnings to their pre-incapacity level (subject to statutory limits).",Workers Compensation Act 1951.pdf
+q11,What is a biopsychosocial approach to rehabilitation?,1.0,True,"A biopsychosocial approach to rehabilitation is a holistic method that considers multiple factors influencing a worker's recovery and return to work.
+
+According to the sources, this approach ""takes a holistic view of disability, understanding that social and environmental factors influence recovery alongside biological factors"" [Source 2]. 
+
+More specifically, rehabilitation providers and claims managers are expected to ""tailor support for the worker with consideration to the biological, psychological and social factors that may influence their recovery and return to work"" [Source 1].
+
+In practice, the biopsychosocial approach is used to:
+- ""understand workers' circumstances""
+- ""identify barriers to desired outcomes"" 
+- ""provide appropriate support for the worker"" [Source 2]
+
+This approach requires claims managers to have ""knowledge of how to apply the principles of good work and the biopsychosocial approach"" and ""the ability to coordinate and tailor the process and support to meet the needs of the worker"" [Source 2].
+
+The framework is particularly recommended for managing psychological claims, where understanding the interplay between biological, psychological, and social factors is critical to supporting recovery and return to work outcomes [Source 2].",National Return to Work Strategy 2020-2030.pdf
+q12,What does 'suitable employment' mean in the context of workers compensation?,1.0,True,"Based on the provided sources, **'suitable employment' is not explicitly defined**, but its relevance is explained in the context of calculating weekly compensation for partially incapacitated workers.
+
+## How 'Suitable Employment' is Used
+
+Under the Workers Compensation Act 1951, when calculating weekly compensation for partial incapacity, the entitlement is the difference between:
+- The worker's average pre-incapacity weekly earnings; and
+- ""the average weekly amount that the worker is being paid for working or **could earn in reasonably available suitable employment**"" [Source 1, Section 39(4)(b)]
+
+## Consideration Factors
+
+When working out what a worker could earn in suitable employment, consideration may be given to:
+- **Suitable employment that the worker unreasonably rejects**
+- **Suitable employment that the worker obtains but unreasonably discontinues** [Source 1, Section 39(5); Source 3, Section 43(3)]
+
+## What This Means in Practice
+
+The Act uses ""suitable employment"" as a benchmark for calculating earning capacity during partial incapacity. If a worker unreasonably rejects or discontinues suitable employment, this can be factored into the compensation calculation, potentially reducing their weekly payments.
+
+**Important limitation**: The sources do not provide criteria for determining what makes employment ""suitable"" (e.g., physical requirements, location, hours, pay rates). You would need to consult additional regulatory guidance, case law, or policy documents to understand how suitability is assessed in practice.",Workers Compensation Act 1951.pdf
+q13,What is the difference between total and partial incapacity for work?,1.0,True,"Based on the provided sources, the difference between total and partial incapacity is:
+
+**Total Incapacity** [Source 1]:
+An injured worker is totally incapacitated for work if:
+- There is no suitable paid employment reasonably available to the worker that the worker can do because of a functional impairment caused by the injury; OR
+- The worker is taken, or declared, to be totally incapacitated under section 35
+
+**Partial Incapacity** [Source 1]:
+An injured worker is partially incapacitated for work if, because of a functional impairment caused by the injury, the worker:
+- Cannot do all the work the worker could do before the injury; AND
+- Is not totally incapacitated
+
+**Key Distinction**: 
+The critical difference is that total incapacity means there is **no** suitable paid employment available that the worker can perform due to their injury, whereas partial incapacity means the worker **cannot do all their previous work** but is still capable of some form of employment (i.e., they are not totally incapacitated) [Source 1].
+
+This distinction has significant implications for compensation entitlements, as totally incapacitated workers receive different weekly compensation amounts than partially incapacitated workers [Source 2, Source 3].",Workers Compensation Act 1951.pdf
+q14,What is a pure premium in insurance and how is it calculated?,0.3333333333333333,True,"Based on the provided source documents, I cannot answer your question about what a pure premium is or how it is calculated.
+
+The sources discuss various aspects of workers compensation insurance including:
+- Premium pools and premium income [Source 1]
+- Reinsurance arrangements and premium liabilities [Source 2]
+- Compulsory insurance policies [Source 3]
+
+However, none of these documents contain a definition of ""pure premium"" or explain its calculation methodology. To answer this question accurately, I would need source documents that specifically define and explain pure premium calculations in the insurance context.",Workers Compensation Act 1951.pdf
+q15,What is reserve setting and why does it matter in claims management?,1.0,True,"Based on the provided sources, I cannot give you a complete definition of reserve setting or explain why it matters in claims management, as the sources do not contain explicit explanations of these concepts.
+
+However, the sources do show **reserve setting in practice**:
+
+In the synthetic claims examples [Source 2], reserves are mentioned as part of the claims process:
+
+- **Claim #A2024-0334**: ""Reserve set at $7,800 covering post-exposure prophylaxis medication, serial blood tests, 6 psychology sessions, and EAP coordination. Final payout $7,400.""
+
+- **Claim #A2024-0447**: The text mentions ""Liability and Reserve"" as a standard section but the reserve details are cut off in the excerpt.
+
+- An earlier claim in Source 2 states: ""Reserve set at $41,500 covering 8 weeks total incapacity payments (at applicable weekly rate), 12 physiotherapy sessions, pain management consultation, specialist MRI, and 10 weeks partial incapacity differential payments. Final payout $38,200.""
+
+From these examples, we can observe that reserves appear to be **estimated amounts set aside to cover anticipated claim costs**, including medical treatments, wage replacement, and other benefits. The ""final payout"" figures suggest reserves are estimates that may differ from actual costs.
+
+However, the SIRA Standards of Practice documents [Source 1, Source 3] do not define reserve setting or explain its importance in claims management principles, expectations, or benchmarks.
+
+**To fully answer your question about what reserve setting is and why it matters, you would need to consult additional source documents** that specifically address financial management and reserving practices in workers compensation claims.",SIRA - Standards of Practice - December-2025.pdf
+q16,"Based on the synthetic claim A2024-1047, what return-to-work outcome was achieved?",0.0,True,"I cannot answer this question because the provided source documents do not contain information about claim A2024-1047.
+
+The sources include:
+- [Source 1] and [Source 3]: Excerpts from the Workers Compensation Act 1951 (ACT) showing legislative provisions and amendments
+- [Source 2]: Synthetic claim narratives for claims #A2024-0112 (administrative officer with wrist injury) and #A2024-0289 (construction labourer with back injury)
+
+Claim A2024-1047 is not present in any of the provided sources. To answer your question about the return-to-work outcome for that specific claim, I would need source documents that contain information about claim A2024-1047.",Workers Compensation Act 1951.pdf
+q17,"For the synthetic claim involving a warehouse operator with a lower back injury, what was the reserve amount set?",1.0,True,"Based on the provided sources, for the warehouse operator with a lower back injury (Claim #A2024-1047), the reserve was set at **$18,500** [Source 3].
+
+This reserve covered:
+- 1 week total incapacity
+- 5 weeks partial incapacity differential payments
+- 8 physiotherapy sessions
+- GP consultations
+- Imaging
+
+The final payout was $17,200, and the claim was closed at week 8 [Source 3].",synthetic_claims.txt
+q18,"From the de-identified synthetic claim narratives in the dataset, what types of workplace injuries are described across the 10 claims?",1.0,True,"Based on the provided source documents, I can only identify details for **3 claims** from the synthetic dataset, not all 10. The source excerpt states ""Total claims: 10"" [Source 2] but only provides complete narratives for three claims.
+
+The workplace injuries described in these three claims are:
+
+1. **Repetitive strain injury (RSI)** - Claim #A2024-0112: de Quervain's tenosynovitis affecting the right wrist and forearm, caused by intensive keyboard and mouse use following increased document processing workload [Source 1]
+
+2. **Acute lower back injury with disc bulge** - Claim #A2024-0289: L4-L5 disc bulge with mild nerve root impingement sustained while manually lifting a 35kg concrete block. Worker heard an audible pop at time of lift and experienced neurological symptoms (left leg tingling) [Source 1]
+
+3. **Slip and fall injuries** - Claim #A2024-1047: Lower back muscular strain and right wrist sprain from slipping on a wet floor in a loading bay (wet floor warning sign was not placed). X-rays confirmed no fractures [Source 1, Source 2]
+
+**I cannot provide information about the remaining 7 claims** as their narratives are not included in the provided source documents. The excerpt ends with ""END OF SYNTHETIC CLAIMS DATASET"" but only shows 3 of the stated 10 claims [Source 2].",synthetic_claims.txt
+q19,What are the current interest rates set by the Reserve Bank of Australia?,0.3333333333333333,True,"I cannot answer this question using the provided sources. The source documents are ACT workers compensation legislation [Source 1, Source 2, Source 3] and do not contain information about Reserve Bank of Australia interest rates. 
+
+To answer questions about current RBA interest rates, you would need to consult Reserve Bank of Australia publications or announcements, which are not included in these sources.",Workers Compensation Regulation 2002.pdf
+q20,Who won the 2024 Australian federal election?,0.3333333333333333,True,"I cannot answer this question using the provided sources. The sources contain only excerpts from the Workers Compensation Act 1951 and Workers Compensation Regulation 2002 from the Australian Capital Territory, which deal with workers compensation legislation. They contain no information about the 2024 Australian federal election.
+
+To answer your question, I would need sources that discuss Australian federal election results, which have not been provided.",Workers Compensation Act 1951.pdf
