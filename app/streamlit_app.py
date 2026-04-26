@@ -6,12 +6,7 @@ Brand: zinc dark + amber accent, matching aayushyagol.com.
 
 import logging
 
-import chromadb
 import streamlit as st
-
-from src.config import CHROMADB_DIR, COLLECTION_NAME
-from src.ingest import build_index
-from src.rag_pipeline import ask
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s — %(message)s")
 logger = logging.getLogger(__name__)
@@ -20,6 +15,10 @@ logger = logging.getLogger(__name__)
 @st.cache_resource(show_spinner=False)
 def ensure_index() -> None:
     """Build the ChromaDB index on first startup if it doesn't exist yet."""
+    import chromadb
+    from src.config import CHROMADB_DIR, COLLECTION_NAME
+    from src.ingest import build_index
+
     try:
         client = chromadb.PersistentClient(path=str(CHROMADB_DIR))
         collection = client.get_collection(COLLECTION_NAME)
@@ -31,6 +30,11 @@ def ensure_index() -> None:
 
     logger.info("No index found. Building from data/raw/ …")
     build_index()
+
+
+def ask(query: str) -> dict:
+    from src.rag_pipeline import ask as _ask
+    return _ask(query)
 
 
 # ── Page config ───────────────────────────────────────────────────────────────
