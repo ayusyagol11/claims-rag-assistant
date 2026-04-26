@@ -143,6 +143,14 @@ Two metrics are computed:
 
 Full results: [`eval/results/eval_results.csv`](eval/results/eval_results.csv)
 
+### Term coverage by question
+
+![Term coverage bar chart](eval/results/term_coverage_chart.png)
+
+Each bar represents one of the 20 evaluation questions. Bar colour indicates coverage tier: **amber** = full coverage (1.0), **orange** = partial coverage, **red** = zero coverage. The white dot above each bar confirms that the correct source document was retrieved — all 20 questions achieved a source match, giving a 100% retrieval precision rate. The dashed line marks the mean at 73%.
+
+Reading across left to right, the chart shows that the system performs consistently on factual legislative questions (q01–q05, q10, q12–q13 all at 100%), with partial scores on procedural and multi-concept questions (q03, q04, q06, q08) where the answer used synonyms rather than the exact expected keywords — a known limitation of lexical term coverage as a metric. The single red bar at q16 is the documented vocabulary collision failure. The three 33% bars at q09, q19, and q20 are expected: q09 asked about APRA case management documentation (a corpus gap), while q19 and q20 are the intentional out-of-scope questions — the system correctly declined both, but the refusal phrasing didn't match the expected keywords, scoring low on the lexical check despite being the correct behaviour.
+
 ### Out-of-scope refusal behaviour
 
 Two questions were deliberately outside the document corpus:
