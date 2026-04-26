@@ -7,9 +7,8 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# Data — processed index is generated, not committed
-data/processed/
 # PDFs and source docs are committed (all publicly available, ~10 MB total)
+# ChromaDB index is committed (~25 MB) so Streamlit Cloud skips the 2-min build on cold start
 
 # OS
 .DS_Store
