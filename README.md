@@ -30,7 +30,11 @@ This project prototypes a Retrieval-Augmented Generation (RAG) system that groun
 
 ## Demo
 
-![Streamlit chat UI](docs/screenshots/chat_ui.png)
+![Streamlit chat UI — landing](docs/screenshots/chat_ui_screenshot_1.png)
+
+![Streamlit chat UI — answer with citations](docs/screenshots/chat_ui_screenshot_2.png)
+
+![Streamlit chat UI — sources panel](docs/screenshots/chat_ui_screenshot_3.png)
 
 *Example query: "What weekly compensation is a worker entitled to during total incapacity?" — answer cites the Workers Compensation Act 1951 and includes the worked example from the legislation.*
 
@@ -59,7 +63,7 @@ All documents are publicly available. The synthetic claim narratives are entirel
 | Orchestration | LlamaIndex | Mature RAG framework with clean pipeline abstractions |
 | Embeddings | `sentence-transformers/all-MiniLM-L6-v2` | Free, runs locally, 384-dimensional — no data leaves the machine during indexing |
 | Vector DB | ChromaDB | Zero-infrastructure persistent local store, simple API |
-| LLM | Anthropic Claude | Strong instruction-following for grounded Q&A; reliable refusal when sources are insufficient |
+| LLM | Anthropic Claude (`claude-haiku-4-5-20251001`) | Strong instruction-following for grounded Q&A; reliable refusal when sources are insufficient; model overrideable via `LLM_MODEL` env var |
 | UI | Streamlit | Fast to iterate, appropriate for internal decision-support tools |
 | Evaluation | Custom harness + Pandas | Lexical term coverage + source match rate across 20 labelled Q&A pairs |
 
@@ -147,7 +151,7 @@ Full results: [`eval/results/eval_results.csv`](eval/results/eval_results.csv)
 
 ![Term coverage bar chart](eval/results/term_coverage_chart.png)
 
-Each bar represents one of the 20 evaluation questions. Bar colour indicates coverage tier: **amber** = full coverage (1.0), **orange** = partial coverage, **red** = zero coverage. The white dot above each bar confirms that the correct source document was retrieved — all 20 questions achieved a source match, giving a 100% retrieval precision rate. The dashed line marks the mean at 73%.
+Each bar represents one of the 20 evaluation questions. Bar colour indicates coverage tier: **amber** = full coverage (1.0), **orange** = partial coverage, **red** = zero coverage. The white dot above each bar confirms that the correct source document was retrieved — all 20 questions achieved a source match, giving a 100% retrieval precision rate. The dashed line marks the mean at 75%.
 
 Reading across left to right, the chart shows that the system performs consistently on factual legislative questions (q01–q05, q10, q12–q13 all at 100%), with partial scores on procedural and multi-concept questions (q03, q04, q06, q08) where the answer used synonyms rather than the exact expected keywords — a known limitation of lexical term coverage as a metric. The single red bar at q16 is the documented vocabulary collision failure. The three 33% bars at q09, q19, and q20 are expected: q09 asked about APRA case management documentation (a corpus gap), while q19 and q20 are the intentional out-of-scope questions — the system correctly declined both, but the refusal phrasing didn't match the expected keywords, scoring low on the lexical check despite being the correct behaviour.
 
@@ -226,6 +230,13 @@ python -m eval.run_eval           # Run the 20-question evaluation harness
 streamlit run app/streamlit_app.py  # Launch the chat UI at localhost:8501
 ```
 
+> **Note:** All commands must be run from the project root (`claims-rag-assistant/`). The Streamlit app resolves `src/` imports relative to the working directory — running it from a subdirectory will cause an import error.
+
+**To override the default model** (e.g. to test with a different Claude version):
+```bash
+LLM_MODEL=claude-sonnet-4-6 streamlit run app/streamlit_app.py
+```
+
 ---
 
 ## What I'd build next
@@ -239,6 +250,18 @@ streamlit run app/streamlit_app.py  # Launch the chat UI at localhost:8501
 **Citation-level evaluation.** Measure whether `[Source N]` tags in the answer correctly correspond to the chunk that actually supports the claim — catching cases where the LLM attributes a fact to the wrong retrieved source.
 
 **Metadata-filtered retrieval.** Tag documents by type (legislative, policy, synthetic) and allow query routing based on question intent — record lookups route to structured search, policy questions route to the vector store.
+
+---
+
+## Engineering notes
+
+**Error handling.** Every stage of the pipeline raises a descriptive `RuntimeError` on failure — document loading, embedding model initialisation, ChromaDB reads/writes, and API calls. The Streamlit UI catches pipeline errors and surfaces a user-friendly message rather than crashing. The eval harness catches per-question failures and records them as error rows, so a single bad question doesn't abort the full run.
+
+**Retry logic.** The Anthropic client is initialised with `max_retries=3`, enabling SDK-native exponential backoff on rate-limit (429) and server-error (5xx) responses.
+
+**Startup validation.** `src/config.py` raises an `EnvironmentError` at import time if `ANTHROPIC_API_KEY` is not set, so misconfiguration surfaces immediately rather than at the first query.
+
+**Structured logging.** All library modules use `logging.getLogger(__name__)` rather than `print()`. Log level and format are configured by the entry point (`streamlit_app.py` or the `__main__` block in each module).
 
 ---
 
