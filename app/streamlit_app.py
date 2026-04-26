@@ -4,13 +4,13 @@ Commercial LLM-style layout: centered landing → chat view on first message.
 Brand: zinc dark + amber accent, matching aayushyagol.com.
 """
 
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).parent.parent))
+import logging
 
 import streamlit as st
 from src.rag_pipeline import ask
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s — %(message)s")
+logger = logging.getLogger(__name__)
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -205,7 +205,7 @@ html, body, .stApp {
 
 
 # ── Helper: render source citations ──────────────────────────────────────────
-def render_sources(sources: list):
+def render_sources(sources: list) -> None:
     if not sources:
         return
     with st.expander(f"📚 {len(sources)} sources retrieved"):
@@ -389,12 +389,23 @@ if prompt:
 
     with st.chat_message("assistant"):
         with st.spinner("Retrieving sources and generating answer…"):
-            result = ask(prompt)
-        st.markdown(result["answer"])
-        render_sources(result.get("sources", []))
+            try:
+                result = ask(prompt)
+                answer = result["answer"]
+                sources = result.get("sources", [])
+            except Exception as exc:
+                logger.error("Pipeline error for query '%.80s': %s", prompt, exc, exc_info=True)
+                st.error(
+                    "Something went wrong while processing your question. "
+                    "Please check your API key and that the index has been built, then try again."
+                )
+                st.stop()
+
+        st.markdown(answer)
+        render_sources(sources)
 
     st.session_state.messages.append({
         "role": "assistant",
-        "content": result["answer"],
-        "sources": result.get("sources", []),
+        "content": answer,
+        "sources": sources,
     })

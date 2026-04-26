@@ -9,7 +9,9 @@ __pycache__/
 
 # Data
 data/processed/
-data/raw/*.pdf
+data/raw/*
+!data/raw/synthetic_claims.txt
+!data/raw/README.md
 
 # OS
 .DS_Store

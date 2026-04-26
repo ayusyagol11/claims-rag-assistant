@@ -1,8 +1,12 @@
 """Generate answers using retrieved context and Claude."""
 
+import logging
+
 import anthropic
 
 from src.config import ANTHROPIC_API_KEY, LLM_MODEL, MAX_TOKENS, TEMPERATURE
+
+logger = logging.getLogger(__name__)
 
 SYSTEM_PROMPT = """You are a knowledgeable assistant specialising in Australian \
 workers compensation, insurance claims, and related regulatory frameworks.
@@ -24,14 +28,20 @@ You are a decision-support tool, not an autonomous authority. Users must verify 
 critical decisions against the source documents themselves."""
 
 
-def build_prompt(query: str, retrieved_nodes) -> str:
-    """Format retrieved chunks + user query into a single prompt."""
+def build_prompt(query: str, retrieved_nodes: list) -> str:
+    """Format retrieved chunks + user query into a single prompt.
+
+    Args:
+        query: The user's question.
+        retrieved_nodes: List of NodeWithScore objects from the retriever.
+
+    Returns:
+        Formatted prompt string ready to send to the LLM.
+    """
     context_parts = []
     for i, node in enumerate(retrieved_nodes, 1):
         source = node.metadata.get("file_name", "unknown")
-        context_parts.append(
-            f"[Source {i}: {source}]\n{node.text}\n"
-        )
+        context_parts.append(f"[Source {i}: {source}]\n{node.text}\n")
     context = "\n---\n".join(context_parts)
 
     return f"""Here are the relevant source documents:
@@ -45,18 +55,36 @@ Question: {query}
 Answer the question using only the sources above. Cite sources inline as [Source N]."""
 
 
-def generate_answer(query: str, retrieved_nodes) -> dict:
-    """Call Claude with the assembled prompt. Return answer + source list."""
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+def generate_answer(query: str, retrieved_nodes: list) -> dict:
+    """Call Claude with the assembled prompt and return the answer with source metadata.
+
+    Args:
+        query: The user's question.
+        retrieved_nodes: List of NodeWithScore objects from the retriever.
+
+    Returns:
+        Dict with keys 'answer' (str) and 'sources' (list of source dicts).
+
+    Raises:
+        RuntimeError: If the Claude API call fails after retries.
+    """
+    # max_retries=3 enables SDK-native exponential backoff on 429/5xx errors
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY, max_retries=3)
     prompt = build_prompt(query, retrieved_nodes)
 
-    message = client.messages.create(
-        model=LLM_MODEL,
-        max_tokens=MAX_TOKENS,
-        temperature=TEMPERATURE,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": prompt}],
-    )
+    logger.debug("Calling %s (max_tokens=%d, temperature=%s)", LLM_MODEL, MAX_TOKENS, TEMPERATURE)
+    try:
+        message = client.messages.create(
+            model=LLM_MODEL,
+            max_tokens=MAX_TOKENS,
+            temperature=TEMPERATURE,
+            system=SYSTEM_PROMPT,
+            messages=[{"role": "user", "content": prompt}],
+        )
+    except anthropic.AuthenticationError as exc:
+        raise RuntimeError("Invalid Anthropic API key — check ANTHROPIC_API_KEY in your .env file.") from exc
+    except anthropic.APIError as exc:
+        raise RuntimeError(f"Claude API error after retries: {exc}") from exc
 
     answer = message.content[0].text
     sources = [
@@ -68,4 +96,5 @@ def generate_answer(query: str, retrieved_nodes) -> dict:
         }
         for i, node in enumerate(retrieved_nodes, 1)
     ]
+    logger.debug("Answer generated (%d chars, %d sources)", len(answer), len(sources))
     return {"answer": answer, "sources": sources}
