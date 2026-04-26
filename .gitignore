@@ -7,11 +7,9 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# Data
+# Data — processed index is generated, not committed
 data/processed/
-data/raw/*
-!data/raw/synthetic_claims.txt
-!data/raw/README.md
+# PDFs and source docs are committed (all publicly available, ~10 MB total)
 
 # OS
 .DS_Store

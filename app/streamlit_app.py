@@ -6,11 +6,32 @@ Brand: zinc dark + amber accent, matching aayushyagol.com.
 
 import logging
 
+import chromadb
 import streamlit as st
+
+from src.config import CHROMADB_DIR, COLLECTION_NAME
+from src.ingest import build_index
 from src.rag_pipeline import ask
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s — %(message)s")
 logger = logging.getLogger(__name__)
+
+
+@st.cache_resource(show_spinner=False)
+def ensure_index() -> None:
+    """Build the ChromaDB index on first startup if it doesn't exist yet."""
+    try:
+        client = chromadb.PersistentClient(path=str(CHROMADB_DIR))
+        collection = client.get_collection(COLLECTION_NAME)
+        if collection.count() > 0:
+            logger.info("Index already exists (%d chunks). Skipping ingest.", collection.count())
+            return
+    except Exception:
+        pass  # collection doesn't exist yet — fall through to build
+
+    logger.info("No index found. Building from data/raw/ …")
+    build_index()
+
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -19,6 +40,10 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# ── Ensure vector index exists (runs once per server process) ─────────────────
+with st.spinner("Loading document index… (first launch takes ~2 minutes)"):
+    ensure_index()
 
 # ── Session state ─────────────────────────────────────────────────────────────
 if "messages" not in st.session_state:
