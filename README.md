@@ -30,7 +30,7 @@ This project prototypes a Retrieval-Augmented Generation (RAG) system that groun
 
 ## Demo
 
-![Streamlit chat UI — landing](docs/screenshots/chat_ui_screenshot_1.png)
+![Streamlit chat UI — landing](docs/screenshots/chat_ui.png)
 
 ![Streamlit chat UI — answer with citations](docs/screenshots/chat_ui_screenshot_2.png)
 
