@@ -3,7 +3,9 @@
 > RAG-powered decision-support assistant for Australian Workers Compensation queries.
 > Grounded answers with inline source citations — built by a practising Claims Advisor.
 
-![Architecture](docs/architecture.png)
+**[→ Live app](https://claims-rag-assistant.streamlit.app/)**
+
+![Claims-RAG-Banner](docs/Claims-rag-banner.png)
 
 ---
 
@@ -32,11 +34,12 @@ This project prototypes a Retrieval-Augmented Generation (RAG) system that groun
 
 ![Streamlit chat UI — landing](docs/screenshots/chat_ui.png)
 
+*Example query: "What is the difference betweem total and partial incapacity?" — answer cites the Workers Compensation Act 1951 and includes the worked example from the legislation.*
 ![Streamlit chat UI — answer with citations](docs/screenshots/chat_ui_screenshot_2.png)
 
 ![Streamlit chat UI — sources panel](docs/screenshots/chat_ui_screenshot_3.png)
 
-*Example query: "What weekly compensation is a worker entitled to during total incapacity?" — answer cites the Workers Compensation Act 1951 and includes the worked example from the legislation.*
+
 
 ---
 
@@ -100,7 +103,7 @@ QUERY TIME (per user question)
 ```
 
 *Full diagram: [`docs/architecture.png`](docs/architecture.png)*
-
+![Architecture](docs/architecture.png)
 ---
 
 ## Architecture decisions
