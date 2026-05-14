@@ -1,3 +1,8 @@
+# PyTorch CPU-only wheels — avoids 45-minute source compilation on Python versions
+# that have no PyPI wheel (e.g. Python 3.14). Pre-built CPU wheels are available
+# here for all Python versions torch supports.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 # Core RAG framework — use llama-index-core to avoid the meta-package pulling in
 # llama-index-llms-anthropic. We call Anthropic directly (src/generate.py), so the
 # LlamaIndex LLM integration is not needed.
