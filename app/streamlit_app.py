@@ -430,10 +430,7 @@ if prompt:
                 sources = result.get("sources", [])
             except Exception as exc:
                 logger.error("Pipeline error for query '%.80s': %s", prompt, exc, exc_info=True)
-                st.error(
-                    "Something went wrong while processing your question. "
-                    "Please check your API key and that the index has been built, then try again."
-                )
+                st.error(f"**{type(exc).__name__}:** {exc}")
                 st.stop()
 
         st.markdown(answer)

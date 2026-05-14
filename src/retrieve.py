@@ -15,16 +15,26 @@ logger = logging.getLogger(__name__)
 _index: VectorStoreIndex | None = None
 
 
+def _load_embed_model() -> HuggingFaceEmbedding:
+    """Load the embedding model, preferring the committed local cache."""
+    if MODELS_DIR.exists():
+        try:
+            return HuggingFaceEmbedding(
+                model_name=EMBEDDING_MODEL,
+                cache_folder=str(MODELS_DIR),
+            )
+        except Exception:
+            logger.warning("Local model cache at %s failed; falling back to HuggingFace download.", MODELS_DIR)
+    return HuggingFaceEmbedding(model_name=EMBEDDING_MODEL)
+
+
 def load_index() -> VectorStoreIndex:
     """Load the ChromaDB index (cached for the process lifetime — loads once, reused every query)."""
     global _index
     if _index is not None:
         return _index
     try:
-        embed_model = HuggingFaceEmbedding(
-            model_name=EMBEDDING_MODEL,
-            cache_folder=str(MODELS_DIR),
-        )
+        embed_model = _load_embed_model()
         chroma_client = chromadb.PersistentClient(path=str(CHROMADB_DIR))
         chroma_collection = chroma_client.get_or_create_collection(COLLECTION_NAME)
         vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
