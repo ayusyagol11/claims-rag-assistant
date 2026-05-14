@@ -24,7 +24,7 @@ CHUNK_SIZE = 800           # characters per chunk
 CHUNK_OVERLAP = 100        # overlap between consecutive chunks
 
 # Retrieval settings
-TOP_K = 5                  # number of chunks to retrieve per query
+TOP_K = 10                 # number of chunks to retrieve per query (10 to yield ~5 unique after dedup)
 
 # LLM settings — LLM_MODEL can be overridden via env var for A/B testing
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
