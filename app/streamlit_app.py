@@ -5,6 +5,12 @@ Brand: zinc dark + amber accent, matching aayushyagol.com.
 """
 
 import logging
+import sys
+from pathlib import Path
+
+# Ensure the project root is on sys.path so `src.*` imports resolve
+# whether Streamlit is launched from the repo root or the app/ subdirectory.
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import streamlit as st
 
