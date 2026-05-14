@@ -15,6 +15,7 @@ DATA_DIR = PROJECT_ROOT / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
 PROCESSED_DIR = DATA_DIR / "processed"
 CHROMADB_DIR = PROCESSED_DIR / "chromadb"
+MODELS_DIR = PROJECT_ROOT / "models"  # committed model weights — no runtime download needed
 
 # Embedding model — runs locally, free, 384 dimensions
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"

@@ -17,7 +17,6 @@ def ensure_index() -> None:
     """Build the ChromaDB index on first startup if it doesn't exist yet."""
     import chromadb
     from src.config import CHROMADB_DIR, COLLECTION_NAME
-    from src.ingest import build_index
 
     try:
         client = chromadb.PersistentClient(path=str(CHROMADB_DIR))
@@ -29,6 +28,7 @@ def ensure_index() -> None:
         pass  # collection doesn't exist yet — fall through to build
 
     logger.info("No index found. Building from data/raw/ …")
+    from src.ingest import build_index  # deferred: only loads torch when a rebuild is needed
     build_index()
 
 

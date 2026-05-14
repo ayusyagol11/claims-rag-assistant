@@ -10,7 +10,7 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 
 from src.config import (
     CHROMADB_DIR, CHUNK_OVERLAP, CHUNK_SIZE, COLLECTION_NAME,
-    EMBEDDING_MODEL, RAW_DATA_DIR,
+    EMBEDDING_MODEL, MODELS_DIR, RAW_DATA_DIR,
 )
 
 logger = logging.getLogger(__name__)
@@ -33,7 +33,10 @@ def build_index() -> VectorStoreIndex:
 
     try:
         logger.info("Loading embedding model: %s", EMBEDDING_MODEL)
-        embed_model = HuggingFaceEmbedding(model_name=EMBEDDING_MODEL)
+        embed_model = HuggingFaceEmbedding(
+            model_name=EMBEDDING_MODEL,
+            cache_folder=str(MODELS_DIR),
+        )
     except Exception as exc:
         raise RuntimeError(f"Failed to load embedding model '{EMBEDDING_MODEL}': {exc}") from exc
 

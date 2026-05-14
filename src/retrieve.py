@@ -8,24 +8,33 @@ from llama_index.core.schema import NodeWithScore
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.vector_stores.chroma import ChromaVectorStore
 
-from src.config import CHROMADB_DIR, COLLECTION_NAME, EMBEDDING_MODEL, TOP_K
+from src.config import CHROMADB_DIR, COLLECTION_NAME, EMBEDDING_MODEL, MODELS_DIR, TOP_K
 
 logger = logging.getLogger(__name__)
 
+_index: VectorStoreIndex | None = None
+
 
 def load_index() -> VectorStoreIndex:
-    """Load the ChromaDB index built during ingestion."""
+    """Load the ChromaDB index (cached for the process lifetime — loads once, reused every query)."""
+    global _index
+    if _index is not None:
+        return _index
     try:
-        embed_model = HuggingFaceEmbedding(model_name=EMBEDDING_MODEL)
+        embed_model = HuggingFaceEmbedding(
+            model_name=EMBEDDING_MODEL,
+            cache_folder=str(MODELS_DIR),
+        )
         chroma_client = chromadb.PersistentClient(path=str(CHROMADB_DIR))
         chroma_collection = chroma_client.get_or_create_collection(COLLECTION_NAME)
         vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
         storage_context = StorageContext.from_defaults(vector_store=vector_store)
-        return VectorStoreIndex.from_vector_store(
+        _index = VectorStoreIndex.from_vector_store(
             vector_store=vector_store,
             storage_context=storage_context,
             embed_model=embed_model,
         )
+        return _index
     except Exception as exc:
         raise RuntimeError(f"Failed to load ChromaDB index from {CHROMADB_DIR}: {exc}") from exc
 

@@ -1,0 +1,11 @@
+[server]
+# Allow enough time for the embedding model to load on cold start
+maxUploadSize = 10
+
+[runner]
+# Disable magic so Streamlit doesn't scan every variable for display
+magicEnabled = false
+
+[browser]
+# Suppress the "you are running in headless mode" banner
+gatherUsageStats = false
